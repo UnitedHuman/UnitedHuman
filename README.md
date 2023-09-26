@@ -9,11 +9,12 @@ However, multi-source data inherently a) contains different parts that do not sp
 To tackle these challenges, we propose an end-to-end framework, UnitedHuman, that empowers continuous GAN with the ability to effectively utilize multi-source data for high-resolution human generation. Specifically, 1) we design a Multi-Source Spatial Transformer that spatially aligns multi-source images to full-body space with a human parametric model. 2) Next, a continuous GAN is proposed with global-structural guidance and CutMix consistency. Patches from different datasets are then sampled and transformed to supervise the training of this scale-invariant generative model. Extensive experiments demonstrate that our model jointly learned from multi-source data achieves superior quality than those learned from a holistic dataset.* <br>
 
 ## Updates
+[26/09/2023] Our paper is released on arXiv.
 [13/07/2023] Our work has been accepted by ICCV2023!
 
 
 ## TODOs
-- [ ] Release technical report.
+- [x] Release technical report.
 - [ ] Release code.
 - [ ] Release pretrained models.
 
@@ -25,11 +26,11 @@ To tackle these challenges, we propose an end-to-end framework, UnitedHuman, tha
 If you find this work useful for your research, please consider citing our paper:
 
 ```bibtex
-@article{0000,
-    title={}, 
+@article{fu2023unitedhuman,
+    title={UnitedHuman: Harnessing Multi-Source Data for High-Resolution Human Generation}, 
     author={Fu, Jianglin and Li, Shikai and Jiang, Yuming and Lin, Kwan-Yee and Wu, Wayne and Liu, Ziwei},
     journal   = {arXiv preprint},
-    volume    = {arXiv:0000.0000},
+    volume    = {arXiv:2309.14335},
     year    = {2023}
 }
 ```
