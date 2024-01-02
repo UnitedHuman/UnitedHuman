@@ -9,14 +9,38 @@ However, multi-source data inherently a) contains different parts that do not sp
 To tackle these challenges, we propose an end-to-end framework, UnitedHuman, that empowers continuous GAN with the ability to effectively utilize multi-source data for high-resolution human generation. Specifically, 1) we design a Multi-Source Spatial Transformer that spatially aligns multi-source images to full-body space with a human parametric model. 2) Next, a continuous GAN is proposed with global-structural guidance and CutMix consistency. Patches from different datasets are then sampled and transformed to supervise the training of this scale-invariant generative model. Extensive experiments demonstrate that our model jointly learned from multi-source data achieves superior quality than those learned from a holistic dataset.* <br>
 
 ## Updates
+- [01/01/2024] Pretrained model and inference scripts are released.
 - [26/09/2023] Our paper is released on arXiv.
 - [13/07/2023] Our work has been accepted by ICCV2023!
 
 
 ## TODOs
 - [x] Release technical report.
-- [ ] Release code.
-- [ ] Release pretrained models.
+- [x] Release Inference code.
+- [x] Release pretrained models.
+- [ ] Release training code.
+
+
+## Usage
+
+### Installation
+To work with this project on your own machine, you need to install the environmnet as follows: 
+
+```
+conda env create -f environment.yml
+conda activate unitedhuman
+```
+
+### Pretrained models
+Please put the downloaded [pretrained models](https://drive.google.com/file/d/1sgtMRWZJ1v4rVzQUaMNeZ8oGv01CyHqm/view?usp=sharing) under the folder 'models'.
+
+### Inference
+This script generates samples with [target_size], you can set it to 256, 512, 1024, 2048.
+if [only_mean] is set to true, you will get image generate by mean latent.
+```
+python inference.py --path_list models/network-snapshot-v1.pkl --only_mean --target_size 2048
+```
+
 
 ## Related Work
 * (ECCV 2022) **StyleGAN-Human: A Data-Centric Odyssey of Human Generation**, Jianglin Fu et al. [[Paper](https://arxiv.org/pdf/2204.11823.pdf)], [[Project Page](https://stylegan-human.github.io/)], [[Dataset](https://github.com/stylegan-human/StyleGAN-Human)]

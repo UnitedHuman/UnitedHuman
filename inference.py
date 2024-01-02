@@ -36,7 +36,7 @@ def main(args):
     only_mean = args.only_mean #False
     model_name = path.split('/')[-1].replace('.pkl','')
 
-    output_path = 'output/'+model_name+'_inference' #.replace('/ckpt','/').replace('s3://expresults/anyres/','')
+    output_path = 'output/'+model_name+'_inference'
     os.makedirs(output_path, exist_ok=True)
 
     

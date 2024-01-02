@@ -1,4 +1,4 @@
-name: anyres-gan
+name: unitedhuman
 channels:
   - pytorch
   - conda-forge
